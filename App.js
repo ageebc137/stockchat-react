@@ -25,30 +25,54 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
 const Tab = createMaterialBottomTabNavigator();
 
+
+function HomePage() {
+    return(
+      <View>
+          <Text>Home Page</Text>
+      </View>
+    )
+}
+
+function ChatPage () {
+    return (
+      <View>
+        <Text>Chat Page</Text>
+      </View>
+    )
+}
+
+function SearchPage () {
+  return (
+    <View>
+      <Text>Search Page</Text>
+    </View>
+  )
+}
+
+function AccountPage () {
+  return (
+    <View>
+      <Text>Account Page</Text>
+    </View>
+  )
+}
+
 const App: () => React$Node = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center"
-      }}
-    >
-      <ScrollView>
-        <View>
-          <Text>Hello</Text>
-        </View>
-      </ScrollView>
-    {/* <Tab.Navigator>
-      <Tab.Screen name="Home" />
-      <Tab.Screen name="Chat" />
-      <Tab.Screen name="Search" />
-      <Tab.Screen name="Settings" />
-    </Tab.Navigator> */}
-    </View>
+    <NavigationContainer>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={HomePage}/>
+      <Tab.Screen name="Chat" component={ChatPage}/>
+      <Tab.Screen name="Search" component={SearchPage}/>
+      <Tab.Screen name="Account" component={AccountPage}/>
+    </Tab.Navigator>
+  </NavigationContainer>
+    
   );
 };
 
