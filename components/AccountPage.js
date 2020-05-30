@@ -18,9 +18,12 @@ import {
 
 function AccountPage() {
     return (
-        <View>
-            <Text>Account Page</Text>
-        </View>
+        <ScrollView>
+            <View>
+                <Text>Account Page</Text>
+            </View>
+        </ScrollView>
+        
     );
 }
 
