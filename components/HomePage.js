@@ -8,14 +8,21 @@ import {
   StatusBar,
 } from 'react-native';
 
-import { VictoryBar } from 'victory-native';
+import { VictoryChart, VictoryLine } from 'victory-native';
 
 function HomePage() {
     return (
         <ScrollView>
             <View>
               <Text>Stocks</Text>
-              <VictoryBar/>
+              <VictoryChart>
+                <VictoryLine 
+                  animate={{
+                    duration: 2000,
+                    onLoad: { duration: 1000 }
+                  }}
+                />
+              </VictoryChart>
             </View>
             <View>
                 <Text>Trending Stocks</Text>
