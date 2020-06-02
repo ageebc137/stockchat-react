@@ -25,7 +25,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
-import BottomTabNavigator from './router/Navigator';
+import BottomTabNavigator from './src/router/Navigator';
 
 const App: () => React$Node = () => {
   return (
