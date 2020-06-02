@@ -8,19 +8,20 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import { VictoryBar } from 'victory-native';
 
 function HomePage() {
     return (
-        <View>
-            <Text>Home Page</Text>
-        </View>
+        <ScrollView>
+            <View>
+              <Text>Stocks</Text>
+              <VictoryBar/>
+            </View>
+            <View>
+                <Text>Trending Stocks</Text>
+            </View>
+
+        </ScrollView>
     );
 }
 
