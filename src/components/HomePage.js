@@ -15,18 +15,20 @@ const finnhubWS = 'wss://ws.finnhub.io';
 
 function HomePage() {
   const [price, setPrice] = useState(0);
+  const [topStocks, setTopStocks] = useState([]);
   const socket = new WebSocket(`${finnhubWS}?token=${VARIABLES.API_KEY}`);
    
   socket.addEventListener('open', function (event) {
-    socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'AAPL'}));
+    socket.send(JSON.stringify({'type':'subscribe', 'symbol': 'V'}));
+   
   });
 
   socket.addEventListener('message', function (event) {
     var data = JSON.parse(event.data)
     if (data.data) {
-      var dataprice = data.data[0]["p"]
+      var dataprice = data.data[0]["p"];
       if (dataprice !== price) setPrice(dataprice);
-      console.log('Message from server ', dataprice );
+      console.log('Message from server ', data.data );
     }
    
     
@@ -48,8 +50,9 @@ function HomePage() {
               </VictoryChart>
             </View>
             <View>
-                
-            </View>
+                <Text>V</Text>
+                <Text>Price</Text>
+            </View> 
 
         </ScrollView>
     );
