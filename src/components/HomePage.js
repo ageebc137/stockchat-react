@@ -51,9 +51,16 @@ function HomePage() {
             </View>
             <View>
                 <Text>V</Text>
-                <Text>Price</Text>
+                <Text>Price:  ${price}</Text>
             </View> 
-
+            <View>
+                <Text>AAPL</Text>
+                <Text>Price:  ${price}</Text>
+            </View> 
+            <View>
+                <Text>FB</Text>
+                <Text>Price:  ${price}</Text>
+            </View> 
         </ScrollView>
     );
 }
