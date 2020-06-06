@@ -19,7 +19,7 @@ import {
 function ChatPage() {
     return (
         <View>
-            <Text>Chat Page</Text>
+            <Text>Chat Stuff</Text>
         </View>
     );
 }
