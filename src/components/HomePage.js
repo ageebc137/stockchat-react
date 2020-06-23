@@ -13,6 +13,12 @@ import { VictoryChart, VictoryLine } from 'victory-native';
 
 const finnhubWS = 'wss://ws.finnhub.io';
 
+const styles = StyleSheet.create({
+  scrollView: {
+    color: "blue"
+  }
+})
+
 function HomePage() {
   const [price, setPrice] = useState(0);
   const [topStocks, setTopStocks] = useState([]);
@@ -33,10 +39,10 @@ function HomePage() {
    
     
    
-});
+  });
 
     return (
-        <ScrollView>
+        <ScrollView style={styles.scrollView}>
             <View>
               <Text>Stocks</Text>
               <Text>${price}</Text>
