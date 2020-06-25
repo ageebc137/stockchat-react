@@ -21,6 +21,7 @@ function AccountPage() {
         <ScrollView>
             <View>
                 <Text>Account Page</Text>
+                {/* add account latter */}
             </View>
         </ScrollView>
         
