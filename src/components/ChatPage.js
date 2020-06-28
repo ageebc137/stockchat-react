@@ -20,6 +20,7 @@ function ChatPage() {
     return (
         <View>
             <Text>Chat Stuff</Text>
+            {/* Chat  */}
         </View>
     );
 }
