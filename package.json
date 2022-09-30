@@ -19,7 +19,7 @@
     "react-native-paper": "^3.10.1",
     "react-native-svg": "^12.1.0",
     "react-native-vector-icons": "^6.6.0",
-    "victory-native": "^34.3.0",
+    "victory-native": "^36.6.8",
     "websocket": "^1.0.31"
   },
   "devDependencies": {
